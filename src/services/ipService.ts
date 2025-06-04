@@ -36,7 +36,7 @@ interface IpInfo {
 
 export async function getIpInfo(ipAddress: string = ''): Promise<IpInfo> {
   try {
-    const url = ipAddress ? `http://ip-api.com/json/${ipAddress}` : `http://ip-api.com/json/`;
+    const url = ipAddress ? `https://ip-api.com/json/${ipAddress}` : `https://ip-api.com/json/`;
     const response = await axios.get<IpApiInfo>(url);
     const data = response.data;
 
